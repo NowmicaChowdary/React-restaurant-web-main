@@ -1,0 +1,97 @@
+.landing {
+    width: 100%;
+    height: 80vh;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Italiana', serif;
+    position:relative
+}
+
+.landing::before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.75;
+    background-image: url("./landing-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top right;
+}
+
+.landing div {
+    color: #fffffffa;
+    font-size: 2.5vw;
+    padding-top: 120px;
+    padding-left: 10vw;
+    position: relative;
+    animation: text-fly-in 5s ease-out
+}
+
+.landing h1:hover{
+    cursor:default;
+    transform: scale(1.05);
+}
+
+.landing h1,p {
+    transition: all 0.5s;
+}
+
+.landing p:hover{
+    cursor:default;
+    transform: scale(1.05);
+}
+
+/* Landing page div flyt-in effect: enter from the left and change opacity */
+@keyframes text-fly-in {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    80% {
+        transform: translateX(2.5%);
+        opacity: 0.8;
+    }
+    95% {
+        transform: translateX(0%);
+        opacity: 0.9;
+    }
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+.view-menu {
+    font-size: 12pt;
+    color: rgba(255, 255, 255, 0.701);
+    margin-left: 30px;
+    transition: all 0.5s;
+}
+
+.view-menu:hover {
+    color: rgba(255, 255, 255, 0.375);
+}
+
+.reservation {
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    font-size: 15pt;
+    color: white;
+    background-color: #4f4c5e;
+    padding: 10px 30px 10px 30px;
+    border: #fff 2px solid;
+    border-radius: 25px;
+}
+
+.reservation:hover {
+    background-color: white;
+    color: #4f4c5e;
+    font-weight: 1000;
+    text-decoration: underline;
+}
